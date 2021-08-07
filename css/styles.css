@@ -23,32 +23,10 @@ p {
   line-height: 1.4;
 }
 
-/* typography  */
-.drk-bl-txt {
-  color: #1d1e35;
-}
-
-.sft-red-txt {
-  color: #f47c57;
-}
-
-.drk-gry-bl-txt {
-  color: #787887;
-}
-
-.very-drk-gry-bl-txt {
-  color: #4a4b5e;
-}
-
 /* backgrounds  */
 .soft-bg-grad {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
   background-image: linear-gradient(#af67e9, #6565e7);
-}
-
-/* dividers  */
-.lt-gr-bl-divider {
-  color: #e7e7e9;
 }
 
 .wrapper {
@@ -143,7 +121,7 @@ p {
           flex-direction: column;
   width: 100%;
   height: auto;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .accordion h1 {
@@ -159,7 +137,7 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  padding: 2rem;
+  padding: 2rem 2rem 2rem 0;
   border-bottom: 1px solid #e7e7e9;
 }
 
@@ -203,7 +181,6 @@ p {
   height: auto;
   max-height: 0;
   overflow: hidden;
-  padding: 0px 10px;
 }
 
 .accordion .a-container.active .accordion-btn {
@@ -263,10 +240,10 @@ p {
   .banner-image .svg-container.drop-shadow img {
     position: absolute;
     top: 50%;
-    left: -20%;
+    left: -55%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
-    width: 120%;
+    width: 150%;
   }
   .banner-image .woman-mobile {
     display: none;
@@ -277,8 +254,8 @@ p {
   .banner-image .box-desktop {
     display: block;
     position: absolute;
-    top: 60%;
-    left: -20%;
+    top: 57%;
+    left: -15%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
     z-index: 10;
@@ -289,6 +266,7 @@ p {
   .accordion {
     padding: 2rem 2rem 2rem 0;
     width: 45%;
+    margin-top: 4rem;
   }
   .accordion h1 {
     text-align: left;
