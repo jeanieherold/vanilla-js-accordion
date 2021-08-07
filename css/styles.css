@@ -38,7 +38,7 @@ p {
       -ms-flex-align: center;
           align-items: center;
   width: 100vw;
-  min-height: 120vh;
+  min-height: 100vh;
 }
 
 /* accordion  */
@@ -54,7 +54,7 @@ p {
   position: relative;
   background-color: #fff;
   border-radius: 20px;
-  width: 90%;
+  width: 80%;
   max-width: 800px;
   margin: 0 auto;
   padding: 0;
@@ -69,6 +69,22 @@ p {
   position: relative;
   width: 100%;
   border-radius: 20px;
+}
+
+.banner-image .woman-mobile {
+  display: block;
+}
+
+.banner-image .woman-desktop {
+  display: none;
+}
+
+.banner-image .drop-shadow {
+  display: none;
+}
+
+.banner-image .box-desktop {
+  display: none;
 }
 
 .banner-image .svg-container {
@@ -95,22 +111,6 @@ p {
   width: 80%;
 }
 
-.banner-image .woman-mobile {
-  display: block;
-}
-
-.banner-image .woman-desktop {
-  display: none;
-}
-
-.banner-image .drop-shadow {
-  display: none;
-}
-
-.banner-image .box-desktop {
-  display: none;
-}
-
 .accordion {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -126,9 +126,10 @@ p {
 
 .accordion h1 {
   text-align: center;
+  margin-top: 0;
 }
 
-.accordion .a-container {
+.accordion .accordion-item-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,11 +138,11 @@ p {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  padding: 2rem 2rem 2rem 0;
+  padding: 1rem 2rem 1rem 0;
   border-bottom: 1px solid #e7e7e9;
 }
 
-.accordion .a-container .accordion-btn {
+.accordion .accordion-item-container .accordion-btn {
   margin: 0;
   position: relative;
   width: 100%;
@@ -152,54 +153,62 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-weight: 400;
+  font-weight: 700;
   cursor: pointer;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
   border-radius: 5px;
 }
 
-.accordion .a-container .accordion-btn .caret {
+.accordion .accordion-item-container .accordion-btn .caret {
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-animation: rotatedown .5s ease-in-out;
-          animation: rotatedown .5s ease-in-out;
+  -webkit-animation: rotatedown .2s ease;
+          animation: rotatedown .2s ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-.accordion .a-container .accordion-btn:hover {
+.accordion .accordion-item-container .accordion-btn:hover {
   color: #f47c57;
 }
 
-.accordion .a-container .a-panel {
+.accordion .accordion-item-container .a-panel {
+  display: none;
   width: 100%;
   color: #262626;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  opacity: 0;
   height: auto;
-  max-height: 0;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation: slideup .5s ease-in;
+  animation: slideup .5s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   overflow: hidden;
 }
 
-.accordion .a-container.active .accordion-btn {
+.accordion .accordion-item-container.active .accordion-btn {
   font-weight: 700;
 }
 
-.accordion .a-container.active .accordion-btn .caret {
+.accordion .accordion-item-container.active .accordion-btn .caret {
   -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-animation: rotateup .5s ease-in-out;
-          animation: rotateup .5s ease-in-out;
+  transform-origin: center;
+  -webkit-animation: rotateup .3s ease-in;
+  animation: rotateup .3s ease-in;
   -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
-.accordion .a-container.active .a-panel {
+.accordion .accordion-item-container.active .a-panel {
+  display: block;
   padding: 15px 0 10px;
-  opacity: 1;
-  max-height: 500px;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation: slidedown .5s ease-in;
+  animation: slidedown .5s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 /* desktop  */
@@ -212,6 +221,24 @@ p {
   }
   .banner-image {
     width: 50%;
+  }
+  .banner-image .woman-mobile {
+    display: none;
+  }
+  .banner-image .woman-desktop {
+    display: block;
+  }
+  .banner-image .box-desktop {
+    display: block;
+    position: absolute;
+    top: 57%;
+    left: -15%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    z-index: 10;
+  }
+  .banner-image .box-desktop img {
+    width: 90%;
   }
   .banner-image .svg-container {
     position: relative;
@@ -245,24 +272,6 @@ p {
             transform: translateY(-50%);
     width: 150%;
   }
-  .banner-image .woman-mobile {
-    display: none;
-  }
-  .banner-image .woman-desktop {
-    display: block;
-  }
-  .banner-image .box-desktop {
-    display: block;
-    position: absolute;
-    top: 57%;
-    left: -15%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    z-index: 10;
-  }
-  .banner-image .box-desktop img {
-    width: 90%;
-  }
   .accordion {
     padding: 2rem 2rem 2rem 0;
     width: 45%;
@@ -270,6 +279,61 @@ p {
   }
   .accordion h1 {
     text-align: left;
+    margin-top: 3rem;
+  }
+}
+
+.slideup {
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation: slideup .3s ease-in;
+  animation: slideup .3s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.slidedown {
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation: slidedown .3s ease-in;
+  animation: slidedown .3s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes slideup {
+  from {
+    max-height: 500px;
+  }
+  to {
+    max-height: 0;
+  }
+}
+
+@keyframes slideup {
+  from {
+    max-height: 500px;
+  }
+  to {
+    max-height: 0;
+  }
+}
+
+@-webkit-keyframes slidedown {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 500px;
+  }
+}
+
+@keyframes slidedown {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 500px;
   }
 }
 
