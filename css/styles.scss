@@ -1,0 +1,176 @@
+/* Global Style  */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+/* browser reset  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* set root rem to 10px to make rem calcs easier  */
+html {
+    font-size: 10px;
+}
+/* 1.2rem is 12px based on 1 rem is 10px  */
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.2rem;
+}
+/* typography  */
+.drk-bl-txt {
+    color: #1d1e35;
+}
+.sft-red-txt {
+    color: #f47c57;
+}
+.drk-gry-bl-txt {
+    color: #787887;
+}
+.very-drk-gry-bl-txt {
+    color: #4a4b5e;
+}
+.sft-red-txt {
+    color: #f47c57
+}
+
+/* backgrounds  */
+.soft-bg-grad {
+    background-image: linear-gradient(rgb(175, 103, 233), rgb(101, 101, 231));
+}
+
+/* dividers  */
+.lt-gr-bl-divider {
+    color: #e7e7e9;
+}
+
+/* layout  */
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+/* buttons  */
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* accordion  */
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 10px 100px 10px;
+    h1{
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: 500;
+    }
+    h2{
+        font-weight: 500;
+    }
+}
+
+.accordion{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    .a-container{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 5px;
+        .accordion-btn{
+            margin: 0;
+            position: relative;
+            padding: 15px 30px;
+            width: 100%;
+            color: #bdbdbd;
+            font-weight: 400;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+            background-color: #262626;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            border-radius: 5px; 
+            
+            .caret{
+                transform-origin: center;
+                animation: rotatedown .5s ease-in-out;
+                animation-fill-mode: forwards;
+            }
+        }
+        .a-panel{
+            width: 100%;       
+            color: #262626;
+            transition: all 0.2s ease-in-out;
+            opacity: 0;
+            height: auto;
+            max-height: 0;
+            overflow: hidden;
+            padding: 0px 10px;
+        }
+
+
+        &.active{
+            .accordion-btn{
+                color: #fff;
+                .caret{
+                    transform-origin: center;
+                    animation: rotateup .5s ease-in-out;
+                    animation-fill-mode: forwards;
+                }
+            }
+            .a-panel{               
+                padding: 15px 10px 10px 10px;
+                opacity: 1;
+                max-height: 500px;              
+            }
+        }
+    }
+}
+
+
+/* tablet */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* desktop  */
+@media only screen and (min-width: 992px) {
+
+}
+
+// animations 
+@keyframes rotateup {
+    from   {transform: rotate(0deg);}
+    to {transform: rotate(540deg);}
+}
+
+@keyframes rotatedown {
+    from   {transform: rotate(540deg);}
+    to {transform: rotate(0deg);}
+}
