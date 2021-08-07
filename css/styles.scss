@@ -162,7 +162,7 @@ p {
             height: auto;
             max-height: 0;
             overflow: hidden;
-            // padding: 0px 10px;
+            padding: 0px 10px;
         }
 
 
@@ -191,7 +191,7 @@ p {
     .container.main-content {
         flex-wrap: nowrap;
         padding: 0;
-        min-height: 50vh;
+        min-height: 60vh;
     }
 
     .banner-image {
@@ -254,7 +254,7 @@ p {
     .accordion {
         padding: 2rem 2rem 2rem 0;
         width: 45%;
-        align-self: center;
+        // align-self: center;
 
         h1 {
             text-align: left;

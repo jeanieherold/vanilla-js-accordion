@@ -203,6 +203,7 @@ p {
   height: auto;
   max-height: 0;
   overflow: hidden;
+  padding: 0px 10px;
 }
 
 .accordion .a-container.active .accordion-btn {
@@ -230,7 +231,7 @@ p {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     padding: 0;
-    min-height: 50vh;
+    min-height: 60vh;
   }
   .banner-image {
     width: 50%;
@@ -288,9 +289,6 @@ p {
   .accordion {
     padding: 2rem 2rem 2rem 0;
     width: 45%;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
   }
   .accordion h1 {
     text-align: left;
