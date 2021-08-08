@@ -74,7 +74,7 @@ p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    min-height: 60vh;
+    min-height: 30vh;
     margin: 0 auto;
   }
 }
@@ -165,7 +165,7 @@ p {
   .banner-image .box-desktop {
     display: block;
     position: absolute;
-    top: 42%;
+    top: 38%;
     left: -25%;
     z-index: 10;
   }
@@ -272,7 +272,7 @@ p {
 }
 
 .accordion .accordion-item-container.active .a-panel {
-  height: 70px;
+  height: 65px;
   opacity: 1;
 }
 

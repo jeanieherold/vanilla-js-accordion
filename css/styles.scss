@@ -57,7 +57,7 @@ p {
     @media only screen and (min-width: 768px) {
         flex-wrap: nowrap;
         align-items: center;
-        min-height: 60vh;
+        min-height: 30vh;
         margin: 0 auto;
     }
 }
@@ -135,7 +135,7 @@ p {
         @media only screen and (min-width: 768px) {
             display: block;
             position: absolute;
-            top: 42%;
+            top: 38%;
             left: -25%;
             z-index: 10;
 
@@ -224,7 +224,7 @@ p {
             }
 
             .a-panel {
-                height: 70px;
+                height: 65px;
                 opacity: 1;
 
                 @media only screen and (min-width: 768px) {
