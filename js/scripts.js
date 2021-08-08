@@ -1,17 +1,11 @@
+const accordion = document.getElementsByClassName('accordion-item-container');
 
-const accordBtns = document.querySelectorAll('.accordion-btn');
-
-accordBtns.forEach((button) => {
-    button.addEventListener('click', () => {
-        const siblings = getSiblings(button.parentElement);
-        siblings.forEach((sibling) => {
-            if (sibling.classList.contains('active')) {
-                sibling.classList.remove('active');
-            }
-        })
-        button.parentElement.classList.toggle('active');      
-    });
-});
+for(let i = 0; i < accordion.length; i++ ) {
+	accordion[i].addEventListener('click', function(){
+		this.classList.toggle('active');
+		
+	})
+}
 
 //find all siblings of an element
 var getSiblings = function (elem) {

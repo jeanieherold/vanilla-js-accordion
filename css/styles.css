@@ -165,8 +165,8 @@ p {
 .accordion .accordion-item-container .accordion-btn .caret {
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-animation: rotatedown .2s ease;
-          animation: rotatedown .2s ease;
+  -webkit-animation: rotatedown .3s ease;
+          animation: rotatedown .3s ease;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -176,17 +176,11 @@ p {
 }
 
 .accordion .accordion-item-container .a-panel {
-  display: none;
-  width: 100%;
-  color: #262626;
-  height: auto;
-  -webkit-transform-origin: top;
-          transform-origin: top;
-  -webkit-animation: slideup .5s ease-in;
-  animation: slideup .5s ease-in;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  position: relative;
+  height: 0;
   overflow: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .accordion .accordion-item-container.active .accordion-btn {
@@ -203,14 +197,14 @@ p {
 }
 
 .accordion .accordion-item-container.active .a-panel {
-  display: block;
-  padding: 15px 0 10px;
-  -webkit-transform-origin: top;
-          transform-origin: top;
-  -webkit-animation: slidedown .5s ease-in;
-  animation: slidedown .5s ease-in;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  height: 70px;
+  padding: 5px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .accordion .accordion-item-container.active .a-panel {
+    height: 60px;
+  }
 }
 
 /* desktop  */
@@ -273,68 +267,14 @@ p {
   }
 }
 
-.slideup {
-  -webkit-transform-origin: top;
-          transform-origin: top;
-  -webkit-animation: slideup .3s ease-in;
-  animation: slideup .3s ease-in;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.slidedown {
-  -webkit-transform-origin: top;
-          transform-origin: top;
-  -webkit-animation: slidedown .3s ease-in;
-  animation: slidedown .3s ease-in;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes slideup {
-  from {
-    max-height: 500px;
-  }
-  to {
-    max-height: 0;
-  }
-}
-
-@keyframes slideup {
-  from {
-    max-height: 500px;
-  }
-  to {
-    max-height: 0;
-  }
-}
-
-@-webkit-keyframes slidedown {
-  from {
-    max-height: 0;
-  }
-  to {
-    max-height: 500px;
-  }
-}
-
-@keyframes slidedown {
-  from {
-    max-height: 0;
-  }
-  to {
-    max-height: 500px;
-  }
-}
-
 @-webkit-keyframes rotateup {
   from {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(540deg);
-            transform: rotate(540deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
 }
 
@@ -344,15 +284,15 @@ p {
             transform: rotate(0deg);
   }
   to {
-    -webkit-transform: rotate(540deg);
-            transform: rotate(540deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
 }
 
 @-webkit-keyframes rotatedown {
   from {
-    -webkit-transform: rotate(540deg);
-            transform: rotate(540deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
   to {
     -webkit-transform: rotate(0deg);
@@ -362,8 +302,8 @@ p {
 
 @keyframes rotatedown {
   from {
-    -webkit-transform: rotate(540deg);
-            transform: rotate(540deg);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
   to {
     -webkit-transform: rotate(0deg);
