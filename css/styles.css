@@ -181,6 +181,7 @@ p {
   overflow: hidden;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  opacity: 0;
 }
 
 .accordion .accordion-item-container.active .accordion-btn {
@@ -199,6 +200,7 @@ p {
 .accordion .accordion-item-container.active .a-panel {
   height: 70px;
   padding: 5px 0;
+  opacity: 1;
 }
 
 @media only screen and (min-width: 768px) {

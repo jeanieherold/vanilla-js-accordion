@@ -149,6 +149,7 @@ p {
             height: 0;
             overflow: hidden;
             transition: 0.5s;
+            opacity: 0;
         }
 
         &.active {
@@ -169,6 +170,7 @@ p {
             .a-panel {
                 height: 70px;
                 padding: 5px 0;
+                opacity: 1;
 
                 @media only screen and (min-width: 768px) {
                     height: 60px;

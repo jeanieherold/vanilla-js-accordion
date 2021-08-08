@@ -1,21 +1,16 @@
+//add event listener to accordion items
 const accordionSlides = document.getElementsByClassName('accordion-item-container');
 
 for(let i = 0; i < accordionSlides.length; i++ ) {
 	accordionSlides[i].addEventListener('click', function(){
-		//remove active from siblings
-		var sib = accordionSlides[0];
-		while(sib) {
-			if(sib.tagName === 'DIV') {
-				//remove active class
-				sib.classList.remove('active');
-			}
-			//check next sibling
-			sib = sib.nextSibling;
-		}
+		//remove active class from siblings
+		var sibs = getSiblings(accordionSlides[i])
+		sibs.forEach((sib) => {
+			sib.classList.remove('active');
+		});
 
-		//add active to slide clicked
+		//toggle active class to slide clicked
 		this.classList.toggle('active');
-		
 	})
 }
 
