@@ -222,7 +222,7 @@ p {
         -ms-flex-align: center;
             align-items: center;
     padding: 0;
-    min-height: 70vh;
+    min-height: 60vh;
     margin: 0 auto;
   }
   .banner-image {
@@ -242,14 +242,12 @@ p {
   .banner-image .box-desktop {
     display: block;
     position: absolute;
-    top: 57%;
+    top: 42%;
     left: -25%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
     z-index: 10;
   }
   .banner-image .box-desktop img {
-    width: 90%;
+    width: 92%;
   }
   .banner-image .svg-container {
     position: relative;
