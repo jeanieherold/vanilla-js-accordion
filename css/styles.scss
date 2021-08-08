@@ -177,16 +177,16 @@ p {
         border-bottom: 1px solid #e7e7e9;
 
         .accordion-btn {
-            margin: 0;
             position: relative;
-            width: 100%;
-            color: #1d1e35;
             display: flex;
             justify-content: space-between;
+            color: #1d1e35;
             font-weight: 400;
             cursor: pointer;
             transition: all .3s ease;
             border-radius: 5px;
+            margin: 0 0 .5rem;
+            width: 100%;
 
             .caret {
                 transform-origin: center;
@@ -225,7 +225,6 @@ p {
 
             .a-panel {
                 height: 70px;
-                padding: 5px 0;
                 opacity: 1;
 
                 @media only screen and (min-width: 768px) {
@@ -236,21 +235,21 @@ p {
     }
 }
 
-//animations
 
+//animations
 @keyframes rotateup {
     from {
         transform: rotate(0deg);
     }
 
     to {
-        transform: rotate(180deg);
+        transform: rotate(540deg);
     }
 }
 
 @keyframes rotatedown {
     from {
-        transform: rotate(180deg);
+        transform: rotate(540deg);
     }
 
     to {
