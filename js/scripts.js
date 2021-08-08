@@ -1,6 +1,8 @@
 //add event listener to accordion items
 const accordionSlides = document.getElementsByClassName('accordion-item-container');
 
+//using a for loop so i have access to 'this' 
+//cant use 'this' in a forEach
 for(let i = 0; i < accordionSlides.length; i++ ) {
 	accordionSlides[i].addEventListener('click', function(){
 		//remove active class from siblings
@@ -14,7 +16,7 @@ for(let i = 0; i < accordionSlides.length; i++ ) {
 	})
 }
 
-//find all siblings of an element
+//find all siblings of an element and return as an array
 var getSiblings = function (elem) {
 
 	// Setup siblings array and get the first sibling
